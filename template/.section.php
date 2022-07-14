@@ -1,0 +1,6 @@
+<?
+$sSectionName = "шаблоон";
+$arDirProperties = Array(
+
+);
+?>
