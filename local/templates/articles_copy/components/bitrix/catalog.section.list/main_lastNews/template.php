@@ -47,21 +47,45 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 ?>
 
 
-<form class="form-news__body">
+<!--<form class="form-news__body">
 	<div class="item-category">
 		<input type="radio" id="news-1" name="category-news" value="all" checked>
 		<label for="news-1" class="item-category__label">Все новости</label>
 	</div>
-		<? $i = 2; ?>
+		<?/* $i = 2; */?>
+		<?/* foreach($arResult['SECTIONS'] as $arItem): */?>
+			<div class="item-category">
+				<input type="radio" id="news-<?/*=$i; */?>" name="category-news" value="<?/*=$arItem['CODE']; */?>">
+				<a type="button" href="/news/<?/*=$arItem['CODE']; */?>/" for=" news-<?/*= $i; */?>" class="item-category__label" ><?/*=$arItem['NAME']; */?> </a>
+			</div>
+		<?/* $i++; */?>
+		<?/* endforeach; */?>
+</form>-->
+
+<form class="form-news__body">
+	<div class="item-category">
+
+		<div class="filter" data-filter="all">Все новости</div>
+	</div>
+
 		<? foreach($arResult['SECTIONS'] as $arItem): ?>
 			<div class="item-category">
-				<input type="radio" id="news-<?=$i; ?>" name="category-news" value="<?=$arItem['CODE']; ?>">
-				<a type="button" href="/furniture_news_s1/<?=$arItem['CODE']; ?>/" for=" news-<?= $i; ?>" class="item-category__label" ><?=$arItem['NAME']; ?> </a>
+				<div class="filter" data-filter="<?=$arItem['CODE']; ?>"><?=$arItem['NAME']; ?></div>
+
 			</div>
-		<? $i++; ?>
+
 		<? endforeach; ?>
 </form>
 
+<script>
+    document.addEventListener("DOMContentLoaded", ()=>{
+        let categoryWrap = document.querySelector(".form-news__body");
+        categoryWrap.addEventListener(('click'), (e)=>{
+            console.log(e.target);
+        })
 
+    })
+
+</script>
 
 
