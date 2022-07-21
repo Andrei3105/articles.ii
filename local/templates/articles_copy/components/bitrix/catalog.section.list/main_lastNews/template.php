@@ -62,30 +62,20 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 		<?/* endforeach; */?>
 </form>-->
 
-<form class="form-news__body">
+<div class="form-news__body">
 	<div class="item-category">
 
-		<div class="filter" data-filter="all">Все новости</div>
+		<div class="filter item-category__label" data-filter="all">Все новости</div>
 	</div>
 
 		<? foreach($arResult['SECTIONS'] as $arItem): ?>
 			<div class="item-category">
-				<div class="filter" data-filter="<?=$arItem['CODE']; ?>"><?=$arItem['NAME']; ?></div>
+				<div class="filter item-category__label" data-filter="<?=$arItem['CODE']; ?>"><?=$arItem['NAME']; ?></div>
 
 			</div>
 
 		<? endforeach; ?>
-</form>
+</div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", ()=>{
-        let categoryWrap = document.querySelector(".form-news__body");
-        categoryWrap.addEventListener(('click'), (e)=>{
-            console.log(e.target);
-        })
-
-    })
-
-</script>
 
 

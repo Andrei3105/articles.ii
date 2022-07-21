@@ -24,7 +24,7 @@ $this->setFrameMode(true);
 	?>
 
     <div class="swiper-slide" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-        <a href="<?=$arItem["DETAIL_PAGE_URL"]; ?>" class="item-event">
+        <a href="/events<?=$arItem["DETAIL_PAGE_URL"]; ?>" class="item-event">
 			<span class="item-event__photo">
 				<img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]; ?>" alt="фото">
             </span>

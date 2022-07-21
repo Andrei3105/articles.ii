@@ -3,7 +3,7 @@ if(!empty($arResult['ITEMS'])) {
     $arElementsIds = [];
     foreach ($arResult['ITEMS'] as $arItem) {
         if (isset($arItem['ID'])) {
-            $arElementsIds = $arItem['ID'];
+            $arElementsIds[] = $arItem['ID'];
         }
     }
 
@@ -12,6 +12,7 @@ if(!empty($arResult['ITEMS'])) {
     while ($el = $dbSections->Fetch()) {
         $arSections[] = $el;
     }
+
     foreach ($arResult['ITEMS'] as $itemKey => $arItem) {
         //Получение Названия основного раздела
 

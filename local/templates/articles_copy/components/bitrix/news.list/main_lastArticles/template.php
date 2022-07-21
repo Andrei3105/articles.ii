@@ -54,11 +54,6 @@ $this->setFrameMode(true);
                     <? foreach($arItem['DISPLAY_PROPERTIES']['TAGS']["VALUE_ENUM"] as $key=>$element ): ?>
                         <div class="item-article__tag"><?=$element; ?></div>
                     <? endforeach; ?>
-                    <!--<div class="item-article__tag">Таможенные платежи</div>
-                    <div class="item-article__tag">ЕАЭС</div>
-                    <div class="item-article__tag">ЕАЭС</div>
-                    <div class="item-article__tag">Срок уплаты</div>
-                    <div class="item-article__tag">Срок уплаты</div>-->
                 </div>
             </div>
         </div>

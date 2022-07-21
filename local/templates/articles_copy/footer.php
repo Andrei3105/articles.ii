@@ -14,6 +14,7 @@ IncludeTemplateLangFile(__FILE__);
 		</div>
 		
 	</div>-->
+</main>
 </body>
 <footer class="footer">
     <div class="container">

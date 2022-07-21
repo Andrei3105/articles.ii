@@ -16,7 +16,15 @@ $arUrlRewrite=array (
     'PATH' => '/products/index.php',
     'SORT' => 100,
   ),
-  2 => 
+  9 => 
+  array (
+    'CONDITION' => '#^/events/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/events/index.php',
+    'SORT' => 100,
+  ),
+  7 => 
   array (
     'CONDITION' => '#^/news/#',
     'RULE' => '',
@@ -32,7 +40,7 @@ $arUrlRewrite=array (
     'PATH' => '/faq/index.php',
     'SORT' => 100,
   ),
-  3 => 
+  8 => 
   array (
     'CONDITION' => '#^/#',
     'RULE' => '',

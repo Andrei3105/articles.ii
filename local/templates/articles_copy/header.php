@@ -13,24 +13,33 @@ Loc::loadMessages(__FILE__);
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
-    <link rel="stylesheet" href="css/style.min.css"/>
+
+
 
     <?$APPLICATION->ShowHead();?>
+
     <?
-    CJSCore::Init( array("jquery") );
+    CJSCore::Init( array("jquery3") );
+    // bootstrap 5
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH. "/js/bootstrap/bootstrap.js");
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH. "/js/script.js");
+
+    // плагин jquery.mCustomScrollbar
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH. '/js/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.js');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH. '/js/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.css');
+
+    // todo перенести в компонент 1
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH. "/js/swiper.js");
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH. "/js/swiper-bundle.min.js");
-
-    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/bootstrap/bootstrap.css");
-    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/bootstrap-icons.css");
-    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/swiper-bundle.min.css");
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/swiper.min.css");
+
+
+     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/bootstrap/bootstrap.css");
+     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/bootstrap/bootstrap-grid.css");
+//    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/bootstrap-icons.css");
+    //    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/swiper-bundle.min.css");
+
+
 
     ?>
     <script src="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.concat.min.js"></script>
@@ -78,7 +87,7 @@ Loc::loadMessages(__FILE__);
             </div>
         </div>
 
-        <!--
+
         <div class="header-menu scrollbar-y">
             <button type="button" class="header-menu__burger">
                 <i class="bi bi-arrow-right-circle"></i>
@@ -169,6 +178,7 @@ Loc::loadMessages(__FILE__);
                 </ul>
             </nav>
         </div>
-        -->
+
     </header>
     <body>
+    <main class="page">
